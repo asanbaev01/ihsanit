@@ -1,11 +1,9 @@
 import React from 'react'
 
-export default function App() {
+export default function Reviews() {
   return (
     <div>
-      <Header/>
       
-      <Footer/>
     </div>
   )
-} 
+}
