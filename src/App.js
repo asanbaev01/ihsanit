@@ -1,3 +1,4 @@
+// App.js
 import React, { useState } from 'react'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
@@ -9,6 +10,7 @@ import Pricing from './page/pricing/Pricing'
 import Reviews from './page/reviews/Reviews'
 import Contact from './page/contact/Contact'
 import './index.css'
+
 function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [selectedCourse, setSelectedCourse] = useState(null)
