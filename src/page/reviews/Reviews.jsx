@@ -1,6 +1,6 @@
 // page/reviews/Reviews.js
 import React, { useState, useEffect } from 'react'
-
+import '../reviews/Reviews.css'
 function Reviews() {
   const [activeReview, setActiveReview] = useState(0)
   const [autoPlay, setAutoPlay] = useState(true)

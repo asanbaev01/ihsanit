@@ -1,6 +1,6 @@
 // page/courses/Courses.js
 import React, { useState } from 'react'
-
+import '../courses/Courses.css'
 function Courses({ setActiveSection, setSelectedCourse }) {
   const [filter, setFilter] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')

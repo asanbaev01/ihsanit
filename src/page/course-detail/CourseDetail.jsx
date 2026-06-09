@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../course-detail/CourseDetail.css'
 
 function CourseDetail({ selectedCourse, setActiveSection }) {
   const [showModal, setShowModal] = useState(false)

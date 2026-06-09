@@ -1,5 +1,5 @@
-// page/pricing/Pricing.js
 import React, { useState } from 'react'
+import '../pricing/Pricing.css'
 
 function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState(null)
@@ -75,7 +75,9 @@ function Pricing() {
             <h3>{plan.name}</h3>
             <div className="pricing-price">
               <span className="currency">сом</span>
-              <span className="amount">{typeof plan.price === 'number' ? plan.price.toLocaleString() : plan.price}</span>
+              <span className={`amount ${typeof plan.price === 'string' ? 'text-price' : ''}`}>
+                {typeof plan.price === 'number' ? plan.price.toLocaleString() : plan.price}
+              </span>
               <span className="period">/{plan.period}</span>
             </div>
             <p className="pricing-courses">{plan.courses}</p>

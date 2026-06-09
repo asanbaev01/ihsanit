@@ -1,6 +1,6 @@
 // page/about/About.js
 import React, { useState } from 'react'
-
+import '../about/About.css'
 function About() {
   const [activeTab, setActiveTab] = useState(0)
   

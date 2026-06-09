@@ -1,5 +1,6 @@
 // page/home/Home.js
 import React, { useState, useEffect } from 'react'
+import '../home/Home.css'
 
 function Home({ setActiveSection }) {
   const [currentSlide, setCurrentSlide] = useState(0)
