@@ -100,6 +100,7 @@ function CourseDetail({ selectedCourse, setActiveSection }) {
           </div>
         </div>
       </div>
+
     </section>
   )
 }
