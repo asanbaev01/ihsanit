@@ -1,4 +1,3 @@
-// page/course-detail/CourseDetail.js
 import React, { useState } from 'react'
 
 function CourseDetail({ selectedCourse, setActiveSection }) {
@@ -112,6 +111,7 @@ function CourseDetail({ selectedCourse, setActiveSection }) {
       )}
 
       {enrolled && <div className="toast">✓ Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>}
+
     </section>
   )
 }
