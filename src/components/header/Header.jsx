@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../header/Header.css'
+import logo from '../../assets/img/ihsanlogo.png'
 
 function Header({ setActiveSection, setSelectedCourse }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -26,7 +27,9 @@ function Header({ setActiveSection, setSelectedCourse }) {
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <h1 onClick={() => handleNavClick('home')}>IHSAN IT ACADEMY</h1>
+      <div className="logo-container" onClick={() => handleNavClick('home')}>
+        <img src={logo} alt="IHSAN IT ACADEMY" className="logo-img" />
+      </div>
       <div className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
         <span></span><span></span><span></span>
       </div>

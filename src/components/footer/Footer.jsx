@@ -1,4 +1,4 @@
-// components/footer/Footer.js
+// Footer.js
 import React, { useState } from 'react'
 import '../footer/Footer.css'
 
