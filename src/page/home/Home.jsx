@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Home.css'
+import { FaBolt, FaLaptopCode, FaBriefcase, FaGraduationCap, FaChartLine, FaUsers, FaCalendarAlt, FaArrowRight, FaQuoteLeft, FaPhoneAlt, FaStar, FaFire, FaGem, FaUserGraduate, FaBuilding, FaBookOpen, FaPaintBrush, FaPython, FaMobileAlt, FaServer, FaCloud, FaCheckCircle, FaRocket, FaChalkboardTeacher, FaRegCommentDots, FaRegSmile, FaUserTie, FaFolderOpen } from 'react-icons/fa'
+import { SiFrontendmentor, SiBackendless, SiDatadog } from 'react-icons/si'
 
 function Home({ setActiveSection }) {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -40,30 +42,30 @@ function Home({ setActiveSection }) {
   }, [])
 
   const courses = [
-    { id: 1, name: 'Frontend Development', count: '1240+', level: 'С нуля до PRO', icon: '🎨', color: 'var(--accent-pink)' },
-    { id: 2, name: 'Backend Development', count: '890+', level: 'Продвинутый', icon: '⚙️', color: 'var(--accent-purple)' },
-    { id: 3, name: 'Python Programming', count: '2100+', level: 'Все уровни', icon: '🐍', color: 'var(--accent-cyan)' },
-    { id: 4, name: 'UI/UX Design', count: '560+', level: 'Начинающий', icon: '🎯', color: 'var(--accent-pink)' },
-    { id: 5, name: 'Data Science', count: '430+', level: 'Средний и выше', icon: '📊', color: 'var(--accent-purple)' },
-    { id: 6, name: 'Mobile Dev', count: '720+', level: 'React Native', icon: '📱', color: 'var(--accent-cyan)' },
-    { id: 7, name: 'DevOps', count: '310+', level: 'Профессиональный', icon: '🚀', color: 'var(--accent-purple)' },
-    { id: 8, name: 'QA Testing', count: '580+', level: 'С нуля', icon: '✅', color: 'var(--accent-pink)' }
+    { id: 1, name: 'Frontend Development', count: '1240+', level: 'С нуля до PRO', icon: <SiFrontendmentor />, color: 'var(--accent-pink)' },
+    { id: 2, name: 'Backend Development', count: '890+', level: 'Продвинутый', icon: <SiBackendless />, color: 'var(--accent-purple)' },
+    { id: 3, name: 'Python Programming', count: '2100+', level: 'Все уровни', icon: <FaPython />, color: 'var(--accent-cyan)' },
+    { id: 4, name: 'UI/UX Design', count: '560+', level: 'Начинающий', icon: <FaPaintBrush />, color: 'var(--accent-pink)' },
+    { id: 5, name: 'Data Science', count: '430+', level: 'Средний и выше', icon: <SiDatadog />, color: 'var(--accent-purple)' },
+    { id: 6, name: 'Mobile Dev', count: '720+', level: 'React Native', icon: <FaMobileAlt />, color: 'var(--accent-cyan)' },
+    { id: 7, name: 'DevOps', count: '310+', level: 'Профессиональный', icon: <FaServer />, color: 'var(--accent-purple)' },
+    { id: 8, name: 'QA Testing', count: '580+', level: 'С нуля', icon: <FaCheckCircle />, color: 'var(--accent-pink)' }
   ]
 
   const benefits = [
-    { icon: '🎓', title: 'Сертификат', desc: 'Государственного образца' },
-    { icon: '💼', title: 'Стажировка', desc: 'В IT компаниях' },
-    { icon: '📂', title: 'Портфолио', desc: '12+ реальных проектов' },
-    { icon: '🚀', title: 'Карьера', desc: 'Помощь в трудоустройстве' },
-    { icon: '👨‍🏫', title: 'Наставники', desc: 'Топ-эксперты индустрии' },
-    { icon: '👥', title: 'Community', desc: 'Комьюнити 5000+ студентов' }
+    { icon: <FaGraduationCap />, title: 'Сертификат', desc: 'Государственного образца' },
+    { icon: <FaBriefcase />, title: 'Стажировка', desc: 'В IT компаниях' },
+    { icon: <FaFolderOpen />, title: 'Портфолио', desc: '12+ реальных проектов' },
+    { icon: <FaRocket />, title: 'Карьера', desc: 'Помощь в трудоустройстве' },
+    { icon: <FaChalkboardTeacher />, title: 'Наставники', desc: 'Топ-эксперты индустрии' },
+    { icon: <FaUsers />, title: 'Community', desc: 'Комьюнити 5000+ студентов' }
   ]
 
   const stats = [
-    { icon: '🎓', value: '5000+', label: 'Выпускников' },
-    { icon: '💼', value: '98%', label: 'Трудоустройство' },
-    { icon: '🤝', value: '350+', label: 'Партнеров' },
-    { icon: '📚', value: '125', label: 'Онлайн курсов' }
+    { icon: <FaUserGraduate />, value: '5000+', label: 'Выпускников' },
+    { icon: <FaChartLine />, value: '98%', label: 'Трудоустройство' },
+    { icon: <FaBuilding />, value: '350+', label: 'Партнеров' },
+    { icon: <FaBookOpen />, value: '125', label: 'Онлайн курсов' }
   ]
 
   const testimonials = [
@@ -118,6 +120,7 @@ function Home({ setActiveSection }) {
       <section className="hero-section scroll-reveal">
         <div className="home-badge" key={`badge-${currentSlide}`}>
           <span className="badge-pulse"></span>
+          <FaBolt style={{ marginRight: '8px' }} />
           {slides[currentSlide].badge}
         </div>
         
@@ -139,10 +142,10 @@ function Home({ setActiveSection }) {
 
         <div className="hero-buttons">
           <button className="btn-modern btn-primary-neon" onClick={() => setActiveSection('courses')}>
-            <span>🚀 Начать обучение</span>
+            <FaRocket style={{ marginRight: '8px' }} /> Начать обучение
           </button>
           <button className="btn-modern btn-secondary-neon" onClick={() => setActiveSection('contacts')}>
-            <span>💬 Консультация</span>
+            <FaRegCommentDots style={{ marginRight: '8px' }} /> Консультация
           </button>
         </div>
       </section>
@@ -163,7 +166,8 @@ function Home({ setActiveSection }) {
 
       <section className="home-courses scroll-reveal">
         <div className="section-header">
-          <h2>🔥 Популярные <span className="gradient-text">направления</span></h2>
+          <FaFire style={{ marginRight: '8px', color: 'var(--accent-pink)' }} />
+          <h2>Популярные <span className="gradient-text">направления</span></h2>
           <p>Выберите профессию будущего и начните зарабатывать уже через 6 месяцев</p>
         </div>
         
@@ -173,11 +177,13 @@ function Home({ setActiveSection }) {
               <div className="card-border-glow"></div>
               <div className="card-content">
                 <div className="course-icon">{course.icon}</div>
-                <span className="course-students">🟢 {course.count} студентов</span>
+                <span className="course-students">
+                  <FaRegSmile style={{ marginRight: '4px' }} /> {course.count} студентов
+                </span>
                 <h4>{course.name}</h4>
                 <span className="course-level">{course.level}</span>
                 <div className="course-footer">
-                  <span className="more-link">Подробнее <span className="arrow">→</span></span>
+                  <span className="more-link">Подробнее <FaArrowRight className="arrow" /></span>
                 </div>
               </div>
             </div>
@@ -187,7 +193,8 @@ function Home({ setActiveSection }) {
 
       <section className="home-benefits scroll-reveal">
         <div className="section-header">
-          <h2>💎 Почему <span className="gradient-text">выбирают нас</span></h2>
+          <FaGem style={{ marginRight: '8px', color: 'var(--accent-cyan)' }} />
+          <h2>Почему <span className="gradient-text">выбирают нас</span></h2>
         </div>
         <div className="benefits-grid">
           {benefits.map((item, idx) => (
@@ -203,7 +210,8 @@ function Home({ setActiveSection }) {
       <section className="home-testimonial scroll-reveal">
         <div className="testimonial-container-modern">
           <div className="testimonial-header">
-            <h3>📣 Что говорят студенты?</h3>
+            <FaRegCommentDots style={{ marginRight: '8px' }} />
+            <h3>Что говорят студенты?</h3>
             <div className="testimonial-nav">
               {testimonials.map((_, idx) => (
                 <button 
@@ -216,7 +224,7 @@ function Home({ setActiveSection }) {
           </div>
 
           <div className="testimonial-card-modern">
-            <div className="quote-mark">“</div>
+            <div className="quote-mark"><FaQuoteLeft /></div>
             <p className="testimonial-text">{testimonials[activeTestimonial].text}</p>
             
             <div className="testimonial-profile">
@@ -232,11 +240,14 @@ function Home({ setActiveSection }) {
 
       <div className="quick-callback-banner scroll-reveal">
         <div className="callback-text">
-          <h4>Остались вопросы?</h4>
-          <p>Оставьте заявку, и наш ментор перезвонит вам в течение 10 минут!</p>
+          <FaUserTie style={{ fontSize: '32px', marginRight: '16px' }} />
+          <div>
+            <h4>Остались вопросы?</h4>
+            <p>Оставьте заявку, и наш ментор перезвонит вам в течение 10 минут!</p>
+          </div>
         </div>
         <button className="btn-modern btn-cyan" onClick={() => alert('Заявка принята!')}>
-          <span>📞 Перезвоните мне</span>
+          <FaPhoneAlt style={{ marginRight: '8px' }} /> Перезвоните мне
         </button>
       </div>
     </div>
