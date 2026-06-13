@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../courses/Courses.css'
+import './Courses.css'
 import { FaSearch, FaCalendarAlt, FaUserGraduate, FaFolderOpen, FaBookOpen, FaCode, FaServer, FaMobileAlt, FaPaintBrush, FaPython, FaDatabase, FaShieldAlt, FaDocker, FaTag, FaArrowRight, FaChalkboardTeacher, FaVideo, FaClock, FaCertificate, FaLanguage, FaGlobe, FaUsers, FaLaptop, FaBuilding, FaInfinity } from 'react-icons/fa'
 
 function Courses({ setActiveSection, setSelectedCourse }) {

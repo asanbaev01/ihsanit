@@ -1,10 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg-dark: #1E1B6B;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --border-glass: rgba(255, 255, 255, 0.12);
+  --accent-blue: #9d9dff;
+  --accent-indigo: #5E5DF2;
+  --accent-deep: #1E1B6B;
+  --accent-yellow: #ffffff;
+  --accent-yellow-glow: rgba(157, 157, 255, 0.4);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+}
+
 .course-detail {
-  background-color: #0C0C3B;
+  background-color: var(--bg-dark);
   min-height: 100vh;
   position: relative;
   padding: 100px 5% 80px;
   max-width: 1600px;
   margin: 0 auto;
+  font-family: 'Inter', 'Montserrat', sans-serif;
 }
 
 .course-detail::before {
@@ -17,8 +33,8 @@
   margin-bottom: 40px;
   background: rgba(255, 255, 255, 0.04);
   box-shadow: none;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
+  border: 1px solid var(--border-glass);
   width: auto;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
@@ -27,6 +43,7 @@
   z-index: 1;
   border-radius: 50px;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
 }
 
 .back-btn::before {
@@ -46,7 +63,7 @@
 .back-btn:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: var(--accent-blue);
   transform: translateX(5px);
   padding-left: 45px;
 }
@@ -64,17 +81,19 @@
   text-align: left;
   margin-bottom: 0;
   font-size: 2.5rem;
-  background: linear-gradient(135deg, #ffffff, #ffffff);
+  background: linear-gradient(135deg, var(--text-main), var(--accent-blue));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
+  font-family: 'Montserrat', 'Inter', sans-serif;
   letter-spacing: -0.5px;
 }
 
 .detail-header h1::after {
   left: 0;
   transform: translateX(0);
-  background: linear-gradient(90deg, #8585FF, transparent);
+  background: linear-gradient(90deg, var(--accent-blue), transparent);
   width: 0;
   height: 3px;
   transition: width 0.4s ease;
@@ -86,13 +105,14 @@
 }
 
 .detail-badge {
-  background: rgba(133, 133, 255, 0.2);
+  background: rgba(157, 157, 255, 0.2);
   padding: 8px 24px;
   border-radius: 40px;
-  color: #8585FF;
+  color: var(--accent-blue);
   font-weight: 700;
   font-size: 14px;
-  border: 1px solid rgba(133, 133, 255, 0.3);
+  font-family: 'Inter', sans-serif;
+  border: 1px solid rgba(157, 157, 255, 0.3);
 }
 
 .detail-grid {
@@ -102,27 +122,28 @@
 }
 
 .detail-section {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   padding: 32px;
   border-radius: 24px;
   margin-bottom: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
   transition: all 0.3s ease;
 }
 
 .detail-section:hover {
-  border-color: rgba(133, 133, 255, 0.3);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-blue);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   background: rgba(255, 255, 255, 0.05);
 }
 
 .detail-section h2 {
   font-size: 1.5rem;
   margin-bottom: 22px;
-  color: #8585FF;
+  color: var(--accent-blue);
   position: relative;
   display: inline-block;
   font-weight: 700;
+  font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
 .detail-section h2::after {
@@ -132,7 +153,7 @@
   left: 0;
   width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, #8585FF, transparent);
+  background: linear-gradient(90deg, var(--accent-blue), transparent);
   transition: width 0.3s ease;
   border-radius: 2px;
 }
@@ -142,10 +163,11 @@
 }
 
 .detail-section p {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
 .syllabus-list {
@@ -154,19 +176,20 @@
 
 .syllabus-list li {
   padding: 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(157, 157, 255, 0.1);
   display: flex;
   align-items: center;
   gap: 14px;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
   font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 .syllabus-list li:hover {
   transform: translateX(8px);
-  color: #8585FF;
-  background: rgba(133, 133, 255, 0.05);
+  color: #ffffff;
+  background: rgba(157, 157, 255, 0.1);
   border-radius: 12px;
   padding-left: 20px;
 }
@@ -174,22 +197,24 @@
 .syllabus-num {
   width: 28px;
   height: 28px;
-  background: rgba(133, 133, 255, 0.2);
+  background: rgba(157, 157, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  color: #8585FF;
+  color: var(--accent-blue);
   font-size: 13px;
+  font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
-  border: 1px solid rgba(133, 133, 255, 0.3);
+  border: 1px solid rgba(157, 157, 255, 0.3);
 }
 
 .syllabus-list li:hover .syllabus-num {
   transform: scale(1.1);
-  background: rgba(133, 133, 255, 0.3);
-  box-shadow: 0 0 12px rgba(133, 133, 255, 0.3);
+  background: var(--accent-blue);
+  color: var(--bg-dark);
+  box-shadow: 0 0 12px var(--accent-yellow-glow);
 }
 
 .detail-tech {
@@ -199,22 +224,23 @@
 }
 
 .detail-tech span {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-card);
   padding: 8px 18px;
   border-radius: 30px;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
   font-size: 0.85rem;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
   cursor: default;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-glass);
 }
 
 .detail-tech span:hover {
   transform: translateY(-3px) scale(1.05);
-  background: rgba(133, 133, 255, 0.15);
-  color: #8585FF;
-  border-color: rgba(133, 133, 255, 0.3);
+  background: rgba(157, 157, 255, 0.2);
+  color: #ffffff;
+  border-color: var(--accent-blue);
 }
 
 .detail-sidebar {
@@ -223,19 +249,19 @@
 }
 
 .price-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   padding: 32px;
   border-radius: 24px;
   text-align: center;
   margin-bottom: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
   transition: all 0.3s ease;
 }
 
 .price-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(133, 133, 255, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-blue);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -244,14 +270,16 @@
   margin-bottom: 15px;
   color: #ffffff;
   font-weight: 600;
+  font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
 .price-amount {
   font-size: 3rem;
   font-weight: 800;
-  color: #8585FF;
+  color: var(--accent-blue);
   margin: 15px 0;
   letter-spacing: -1px;
+  font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
 .enroll-btn {
@@ -263,12 +291,13 @@
   padding: 14px;
   font-size: 1rem;
   font-weight: 700;
+  font-family: 'Inter', 'Montserrat', sans-serif;
   border-radius: 50px;
-  border: none;
   cursor: pointer;
-  background: rgba(133, 133, 255, 0.2);
-  color: #8585FF;
-  border: 1px solid rgba(133, 133, 255, 0.3);
+  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-blue));
+  color: var(--accent-yellow);
+  border: none;
+  box-shadow: 0 8px 20px rgba(94, 93, 242, 0.3);
 }
 
 .enroll-btn::before {
@@ -278,7 +307,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(133, 133, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
@@ -287,23 +316,23 @@
 }
 
 .enroll-btn:hover {
-  background: rgba(133, 133, 255, 0.3);
+  background: #ffffff;
+  color: var(--accent-deep);
   transform: translateY(-3px);
-  border-color: rgba(133, 133, 255, 0.5);
-  color: #ffffff;
+  box-shadow: 0 15px 30px var(--accent-yellow-glow);
 }
 
 .info-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   padding: 25px;
   border-radius: 24px;
   margin-bottom: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
   transition: all 0.3s ease;
 }
 
 .info-card:hover {
-  border-color: rgba(133, 133, 255, 0.3);
+  border-color: var(--accent-blue);
   transform: translateX(5px);
   background: rgba(255, 255, 255, 0.05);
 }
@@ -311,54 +340,58 @@
 .info-card h3 {
   font-size: 1.1rem;
   margin-bottom: 18px;
-  color: #8585FF;
+  color: var(--accent-blue);
   position: relative;
   display: inline-block;
   font-weight: 700;
+  font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
 .info-row {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(157, 157, 255, 0.1);
+  color: var(--text-main);
   font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
 }
 
 .info-row:hover {
-  color: #8585FF;
+  color: #ffffff;
   transform: translateX(5px);
   padding-left: 5px;
 }
 
 .contact-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   padding: 25px;
   border-radius: 24px;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
   transition: all 0.3s ease;
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(133, 133, 255, 0.3);
+  border-color: var(--accent-blue);
   background: rgba(255, 255, 255, 0.05);
 }
 
 .contact-card h3 {
   margin-bottom: 12px;
-  color: #8585FF;
+  color: var(--accent-blue);
   font-size: 1.1rem;
   font-weight: 700;
+  font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
 .contact-card p {
   font-size: 0.85rem;
   margin-bottom: 18px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
 }
 
 .contact-card button {
@@ -367,18 +400,19 @@
   width: auto;
   transition: all 0.3s ease;
   background: transparent;
-  border: 1px solid rgba(133, 133, 255, 0.3);
-  color: #8585FF;
+  border: 1px solid var(--border-glass);
+  color: var(--accent-blue);
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
 }
 
 .contact-card button:hover {
-  background: rgba(133, 133, 255, 0.2);
-  color: #ffffff;
+  background: var(--accent-blue);
+  color: var(--bg-dark);
   transform: scale(1.05);
-  border-color: rgba(133, 133, 255, 0.5);
+  border-color: transparent;
 }
 
 .modal {
@@ -387,7 +421,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(12, 12, 59, 0.96);
+  background: rgba(30, 27, 107, 0.96);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -395,13 +429,13 @@
 }
 
 .modal-content {
-  background-color: #0C0C3B;
+  background-color: var(--bg-dark);
   padding: 40px;
   border-radius: 28px;
   max-width: 500px;
   width: 90%;
   position: relative;
-  border: 1px solid rgba(133, 133, 255, 0.3);
+  border: 1px solid var(--border-glass);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
@@ -411,7 +445,7 @@
   right: 22px;
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted);
   font-size: 30px;
   cursor: pointer;
   padding: 0;
@@ -426,9 +460,9 @@
 }
 
 .modal-close:hover {
-  background: rgba(133, 133, 255, 0.15);
+  background: rgba(157, 157, 255, 0.15);
   transform: rotate(90deg) scale(1.1);
-  color: #8585FF;
+  color: var(--accent-blue);
 }
 
 .modal-content h2 {
@@ -437,6 +471,7 @@
   font-size: 1.5rem;
   text-align: center;
   font-weight: 700;
+  font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
 .modal-content input {
@@ -444,22 +479,24 @@
   padding: 14px 18px;
   margin-bottom: 16px;
   border-radius: 14px;
-  border: 1px solid rgba(133, 133, 255, 0.2);
+  border: 1px solid var(--border-glass);
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
   outline: none;
   font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
 }
 
 .modal-content input:focus {
-  border-color: #8585FF;
-  box-shadow: 0 0 0 5px rgba(133, 133, 255, 0.1);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 5px rgba(157, 157, 255, 0.1);
   transform: scale(1.01);
 }
 
 .modal-content input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-muted);
+  opacity: 0.5;
 }
 
 .modal-content button[type="submit"] {
@@ -469,32 +506,33 @@
   padding: 14px;
   font-size: 1rem;
   font-weight: 700;
+  font-family: 'Inter', 'Montserrat', sans-serif;
   border-radius: 50px;
-  border: none;
   cursor: pointer;
-  background: rgba(133, 133, 255, 0.2);
-  color: #8585FF;
-  border: 1px solid rgba(133, 133, 255, 0.3);
+  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-blue));
+  color: var(--accent-yellow);
+  border: none;
 }
 
 .modal-content button[type="submit"]:hover {
-  background: rgba(133, 133, 255, 0.3);
+  background: #ffffff;
+  color: var(--accent-deep);
   transform: translateY(-3px);
-  color: #ffffff;
 }
 
 .toast {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: rgba(133, 133, 255, 0.2);
-  border: 1px solid rgba(133, 133, 255, 0.3);
-  color: #8585FF;
+  background: rgba(30, 27, 107, 0.9);
+  border: 1px solid var(--accent-blue);
+  color: #ffffff;
   padding: 14px 28px;
   border-radius: 50px;
   z-index: 2000;
   font-weight: 700;
   font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 

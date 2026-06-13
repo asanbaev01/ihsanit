@@ -1,6 +1,5 @@
-// Footer.js
 import React, { useState } from 'react'
-import '../footer/Footer.css'
+import './Footer.css'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -40,7 +39,7 @@ function Footer() {
           <div className="footer-contact">
             <p>📍 Бишкек, Кыргызстан</p>
             <p>📞 +996 550 123 456</p>
-            <p>✉️ info@ihsanit.kg</p>
+            <p>✉️ info@ohsanit.kg</p>
           </div>
         </div>
         <div className="footer-section">
@@ -77,7 +76,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© {currentYear} IHSAN IT ACADEMY. Все права защищены.</p>
+        <p>© {currentYear} OHSAN IT ACADEMY. Все права защищены.</p>
       </div>
     </footer>
   )

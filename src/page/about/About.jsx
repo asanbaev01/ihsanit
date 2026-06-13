@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../about/About.css'
+import './About.css'
 
 function About() {
   const [activeTab, setActiveTab] = useState(0)
@@ -57,7 +57,7 @@ function About() {
       <h1>Об академии</h1>
       <div className="about-hero">
         <p className="about-text">
-          Ihsan IT Academy - ведущая IT академия в Кыргызстане с 2015 года. 
+          OHSAN IT Academy - ведущая IT академия в Кыргызстане с 2015 года. 
           Мы подготовили более 5000 специалистов, которые работают в топовых IT компаниях по всему миру.
         </p>
       </div>

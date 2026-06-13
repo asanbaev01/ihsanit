@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Home.css'
-import { FaBolt, FaLaptopCode, FaBriefcase, FaGraduationCap, FaChartLine, FaUsers, FaCalendarAlt, FaArrowRight, FaQuoteLeft, FaPhoneAlt, FaStar, FaFire, FaGem, FaUserGraduate, FaBuilding, FaBookOpen, FaPaintBrush, FaPython, FaMobileAlt, FaServer, FaCloud, FaCheckCircle, FaRocket, FaChalkboardTeacher, FaRegCommentDots, FaRegSmile, FaUserTie, FaFolderOpen } from 'react-icons/fa'
+import { FaBolt, FaBriefcase, FaGraduationCap, FaChartLine, FaUsers, FaArrowRight, FaQuoteLeft, FaPhoneAlt, FaFire, FaGem, FaUserGraduate, FaBuilding, FaBookOpen, FaPaintBrush, FaPython, FaMobileAlt, FaServer, FaCheckCircle, FaRocket, FaChalkboardTeacher, FaRegCommentDots, FaRegSmile, FaUserTie, FaFolderOpen } from 'react-icons/fa'
 import { SiFrontendmentor, SiBackendless, SiDatadog } from 'react-icons/si'
 
 function Home({ setActiveSection }) {
@@ -42,14 +42,14 @@ function Home({ setActiveSection }) {
   }, [])
 
   const courses = [
-    { id: 1, name: 'Frontend Development', count: '1240+', level: 'С нуля до PRO', icon: <SiFrontendmentor />, color: 'var(--accent-pink)' },
-    { id: 2, name: 'Backend Development', count: '890+', level: 'Продвинутый', icon: <SiBackendless />, color: 'var(--accent-purple)' },
-    { id: 3, name: 'Python Programming', count: '2100+', level: 'Все уровни', icon: <FaPython />, color: 'var(--accent-cyan)' },
-    { id: 4, name: 'UI/UX Design', count: '560+', level: 'Начинающий', icon: <FaPaintBrush />, color: 'var(--accent-pink)' },
-    { id: 5, name: 'Data Science', count: '430+', level: 'Средний и выше', icon: <SiDatadog />, color: 'var(--accent-purple)' },
-    { id: 6, name: 'Mobile Dev', count: '720+', level: 'React Native', icon: <FaMobileAlt />, color: 'var(--accent-cyan)' },
-    { id: 7, name: 'DevOps', count: '310+', level: 'Профессиональный', icon: <FaServer />, color: 'var(--accent-purple)' },
-    { id: 8, name: 'QA Testing', count: '580+', level: 'С нуля', icon: <FaCheckCircle />, color: 'var(--accent-pink)' }
+    { id: 1, name: 'Frontend Development', count: '1240+', level: 'С нуля до PRO', icon: <SiFrontendmentor /> },
+    { id: 2, name: 'Backend Development', count: '890+', level: 'Продвинутый', icon: <SiBackendless /> },
+    { id: 3, name: 'Python Programming', count: '2100+', level: 'Все уровни', icon: <FaPython /> },
+    { id: 4, name: 'UI/UX Design', count: '560+', level: 'Начинающий', icon: <FaPaintBrush /> },
+    { id: 5, name: 'Data Science', count: '430+', level: 'Средний и выше', icon: <SiDatadog /> },
+    { id: 6, name: 'Mobile Dev', count: '720+', level: 'React Native', icon: <FaMobileAlt /> },
+    { id: 7, name: 'DevOps', count: '310+', level: 'Профессиональный', icon: <FaServer /> },
+    { id: 8, name: 'QA Testing', count: '580+', level: 'С нуля', icon: <FaCheckCircle /> }
   ]
 
   const benefits = [
@@ -106,15 +106,6 @@ function Home({ setActiveSection }) {
 
   return (
     <div className="home">
-      <div className="glow-bg">
-        <div className="orb orb-blue"></div>
-        <div className="orb orb-indigo"></div>
-        <div className="orb orb-deep"></div>
-        <div className="orb orb-yellow-accent"></div>
-        <div className="orb orb-yellow-accent-2"></div>
-      </div>
-      <div className="cyber-grid"></div>
-
       <div className={`navbar-glow ${scrolled ? 'scrolled' : ''}`}></div>
 
       <section className="hero-section scroll-reveal">
@@ -166,25 +157,22 @@ function Home({ setActiveSection }) {
 
       <section className="home-courses scroll-reveal">
         <div className="section-header">
-          <FaFire style={{ marginRight: '8px', color: 'var(--accent-pink)' }} />
+          <FaFire style={{ marginRight: '8px' }} />
           <h2>Популярные <span className="gradient-text">направления</span></h2>
           <p>Выберите профессию будущего и начните зарабатывать уже через 6 месяцев</p>
         </div>
         
         <div className="courses-grid">
           {courses.map((course) => (
-            <div className="course-card" key={course.id} style={{ '--card-accent': course.color }}>
-              <div className="card-border-glow"></div>
-              <div className="card-content">
-                <div className="course-icon">{course.icon}</div>
-                <span className="course-students">
-                  <FaRegSmile style={{ marginRight: '4px' }} /> {course.count} студентов
-                </span>
-                <h4>{course.name}</h4>
-                <span className="course-level">{course.level}</span>
-                <div className="course-footer">
-                  <span className="more-link">Подробнее <FaArrowRight className="arrow" /></span>
-                </div>
+            <div className="course-card" key={course.id}>
+              <div className="course-icon">{course.icon}</div>
+              <span className="course-students">
+                <FaRegSmile style={{ marginRight: '4px' }} /> {course.count} студентов
+              </span>
+              <h4>{course.name}</h4>
+              <span className="course-level">{course.level}</span>
+              <div className="course-footer">
+                <span className="more-link">Подробнее <FaArrowRight className="arrow" /></span>
               </div>
             </div>
           ))}
@@ -193,7 +181,7 @@ function Home({ setActiveSection }) {
 
       <section className="home-benefits scroll-reveal">
         <div className="section-header">
-          <FaGem style={{ marginRight: '8px', color: 'var(--accent-cyan)' }} />
+          <FaGem style={{ marginRight: '8px' }} />
           <h2>Почему <span className="gradient-text">выбирают нас</span></h2>
         </div>
         <div className="benefits-grid">

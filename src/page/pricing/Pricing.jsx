@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../pricing/Pricing.css'
+import './Pricing.css'
 import { FaCheckCircle, FaStar, FaRocket, FaUsers, FaChartLine, FaClock, FaShieldAlt, FaHeadset, FaLaptopCode, FaCertificate, FaBriefcase, FaInfinity, FaCalendarAlt, FaGift, FaUserGraduate, FaCommentDots, FaTelegram, FaWhatsapp, FaPhoneAlt } from 'react-icons/fa'
 
 function Pricing() {
@@ -16,7 +16,7 @@ function Pricing() {
       features: ['1 курс в месяц', 'Базовая поддержка (9:00-18:00)', 'Доступ в закрытое сообщество', 'Материалы курса в PDF', 'Сертификат об окончании', 'Доступ к записям уроков'], 
       popular: false, 
       courses: 'Любой 1 курс',
-      color: '#8585FF',
+      color: '#9d9dff',
       icon: <FaUserGraduate />
     },
     { 
@@ -26,7 +26,7 @@ function Pricing() {
       features: ['До 3 курсов одновременно', 'Приоритетная поддержка 24/7', '2 индивидуальные сессии с ментором', 'Проверка домашних заданий', 'Сертификат + Портфолио', 'Помощь с трудоустройством', 'Карьерные вебинары', 'Доступ ко всем материалам'], 
       popular: true, 
       courses: 'До 3 курсов',
-      color: '#FFD966',
+      color: '#9d9dff',
       icon: <FaRocket />
     },
     { 
@@ -36,7 +36,7 @@ function Pricing() {
       features: ['Все курсы без ограничений', 'VIP поддержка 24/7', 'Неограниченные сессии с ментором', 'Персональный карьерный коуч', 'Помощь с составлением резюме', 'Подготовка к собеседованию', 'Стажировка в IT компании', 'Сертификат международного образца', 'Доступ к закрытым мероприятиям'], 
       popular: false, 
       courses: 'Все курсы',
-      color: '#FF6B6B',
+      color: '#9d9dff',
       icon: <FaStar />
     },
     { 
@@ -46,7 +46,7 @@ function Pricing() {
       features: ['До 10 сотрудников', 'Индивидуальная программа обучения', 'HR консультации', 'Отслеживание прогресса команды', 'Сертификаты для всех сотрудников', 'Корпоративный портал', 'Ежемесячный отчет', 'Приоритетная поддержка'], 
       popular: false, 
       courses: 'Корпоративное обучение',
-      color: '#4ECDC4',
+      color: '#9d9dff',
       icon: <FaUsers />
     },
     { 
@@ -56,7 +56,7 @@ function Pricing() {
       features: ['Неограниченное количество сотрудников', 'Полностью кастомизированная программа', 'Выделенный менеджер', 'API интеграция с вашей LMS', 'Онбординг сотрудников', 'Сертификация по стандартам ISO', 'Круглосуточная поддержка', 'Юридическое сопровождение'], 
       popular: false, 
       courses: 'Индивидуальная программа',
-      color: '#9B59B6',
+      color: '#9d9dff',
       icon: <FaBriefcase />
     }
   ]
@@ -192,7 +192,7 @@ function Pricing() {
         <div className="contact-buttons">
           <a href="tel:+996550123456" className="contact-btn phone"><FaPhoneAlt /> +996 550 123 456</a>
           <a href="https://wa.me/996550123456" className="contact-btn whatsapp"><FaWhatsapp /> WhatsApp</a>
-          <a href="https://t.me/ihsanit" className="contact-btn telegram"><FaTelegram /> Telegram</a>
+          <a href="https://t.me/ohsanit" className="contact-btn telegram"><FaTelegram /> Telegram</a>
         </div>
       </div>
 
