@@ -6,11 +6,15 @@
   --border-glass: rgba(255, 255, 255, 0.12);
   --accent-blue: #9d9dff;
   --accent-indigo: #5E5DF2;
+  --accent-gold: #E8C97A;
+  --accent-rose: #FF6B9D;
+  --accent-cyan: #00D4FF;
   --accent-deep: #1E1B6B;
-  --accent-yellow: #ffffff;
-  --accent-yellow-glow: rgba(157, 157, 255, 0.4);
+  --accent-gold-glow: rgba(232, 201, 122, 0.2);
+  --accent-rose-glow: rgba(255, 107, 157, 0.1);
   --text-main: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.7);
+  --text-warm: #EDE4F5;
 }
 
 .pricing {
@@ -28,23 +32,24 @@
   font-family: 'Montserrat', 'Inter', sans-serif;
   text-align: center;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, var(--text-main), var(--accent-blue), var(--accent-indigo));
+  background: linear-gradient(135deg, var(--text-main), var(--accent-gold), var(--accent-blue), var(--accent-indigo));
+  background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
 }
 
 .pricing-subtitle {
   text-align: center;
   margin-bottom: 60px;
-  color: var(--text-muted);
+  color: var(--text-warm);
   font-size: 1.25rem;
   font-family: 'Inter', sans-serif;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+  text-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .pricing-grid {
@@ -60,7 +65,7 @@
   border-radius: 28px;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -74,7 +79,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-gold), var(--accent-blue), transparent);
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
@@ -84,10 +89,10 @@
 }
 
 .pricing-card.popular {
-  border-color: var(--accent-blue);
+  border-color: var(--accent-gold);
   transform: scale(1.02);
-  box-shadow: 0 10px 35px var(--accent-yellow-glow);
-  background: rgba(157, 157, 255, 0.08);
+  box-shadow: 0 10px 35px var(--accent-gold-glow), 0 0 50px rgba(232, 201, 122, 0.04);
+  background: rgba(232, 201, 122, 0.04);
 }
 
 .popular-badge {
@@ -95,14 +100,14 @@
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-blue));
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
   padding: 6px 20px;
   border-radius: 40px;
   font-size: 12px;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
-  color: var(--accent-yellow);
-  box-shadow: 0 0 15px var(--accent-yellow-glow);
+  color: var(--bg-dark);
+  box-shadow: 0 0 25px var(--accent-gold-glow);
 }
 
 .plan-icon {
@@ -112,9 +117,9 @@
 
 .pricing-card:hover {
   transform: translateY(-10px);
-  border-color: var(--accent-blue);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-gold);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4), 0 0 40px var(--accent-gold-glow);
+  background: rgba(232, 201, 122, 0.02);
 }
 
 .pricing-card.popular:hover {
@@ -131,7 +136,10 @@
 }
 
 .pricing-card:hover h3 {
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .pricing-price {
@@ -145,15 +153,19 @@
 
 .pricing-price .currency {
   font-size: 18px;
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   font-weight: 600;
   font-family: 'Inter', sans-serif;
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 .pricing-price .amount {
   font-size: 52px;
   font-weight: 800;
-  color: var(--text-main);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 1;
   transition: all 0.3s ease;
   letter-spacing: -2px;
@@ -162,7 +174,7 @@
 
 .pricing-card:hover .pricing-price .amount {
   transform: scale(1.02);
-  text-shadow: 0 0 15px var(--accent-yellow-glow);
+  text-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .pricing-price .amount.text-price {
@@ -179,15 +191,16 @@
 
 .pricing-courses {
   font-size: 14px;
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   margin-bottom: 25px;
-  background: rgba(157, 157, 255, 0.15);
-  border: 1px solid var(--border-glass);
+  background: rgba(232, 201, 122, 0.04);
+  border: 1px solid rgba(232, 201, 122, 0.06);
   display: inline-block;
   padding: 6px 16px;
   border-radius: 20px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 .pricing-features {
@@ -210,20 +223,22 @@
 
 .pricing-features li:hover {
   transform: translateX(5px);
-  color: var(--accent-blue);
+  color: var(--accent-gold);
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 .pricing-features li .checkmark {
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   font-size: 16px;
   min-width: 20px;
 }
 
 .more-features {
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   font-style: italic;
   margin-top: 5px;
   opacity: 0.8;
+  text-shadow: 0 0 10px var(--accent-gold-glow);
 }
 
 .btn-primary, .btn-secondary {
@@ -240,29 +255,31 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-blue));
-  color: var(--accent-yellow);
-  box-shadow: 0 8px 25px rgba(94, 93, 242, 0.3);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose), var(--accent-indigo));
+  background-size: 200% auto;
+  color: var(--bg-dark);
+  box-shadow: 0 8px 25px var(--accent-gold-glow);
 }
 
 .btn-primary:hover {
-  background: #ffffff;
-  color: var(--accent-deep);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px var(--accent-yellow-glow);
+  background-position: 100% center;
+  color: var(--bg-dark);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 35px var(--accent-gold-glow), 0 0 50px var(--accent-rose-glow);
 }
 
 .btn-secondary {
   background: transparent;
-  border: 2px solid var(--accent-blue);
-  color: var(--accent-blue);
+  border: 2px solid rgba(232, 201, 122, 0.15);
+  color: var(--accent-gold);
 }
 
 .btn-secondary:hover {
-  background: rgba(157, 157, 255, 0.15);
+  background: rgba(232, 201, 122, 0.04);
   transform: translateY(-3px);
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .discounts-section, .additional-services {
@@ -275,7 +292,10 @@
   font-family: 'Montserrat', 'Inter', sans-serif;
   text-align: center;
   margin-bottom: 30px;
-  color: var(--text-main);
+  background: linear-gradient(135deg, var(--text-main), var(--accent-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .discounts-grid {
@@ -286,7 +306,7 @@
 
 .discount-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   border-radius: 20px;
   padding: 25px;
   text-align: center;
@@ -295,15 +315,18 @@
 
 .discount-card:hover {
   transform: translateY(-5px);
-  border-color: var(--accent-blue);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .discount-percent {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px var(--accent-yellow-glow);
   font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
@@ -328,7 +351,7 @@
 
 .service-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   border-radius: 20px;
   padding: 25px;
   text-align: center;
@@ -338,20 +361,21 @@
 
 .service-card:hover {
   transform: translateY(-5px);
-  border-color: var(--accent-indigo);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .service-card.popular-service {
-  border-color: var(--accent-blue);
-  background: rgba(157, 157, 255, 0.08);
+  border-color: var(--accent-gold);
+  background: rgba(232, 201, 122, 0.03);
 }
 
 .service-badge {
   position: absolute;
   top: -10px;
   right: 15px;
-  background: var(--accent-blue);
-  color: var(--accent-deep);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  color: var(--bg-dark);
   padding: 3px 12px;
   border-radius: 20px;
   font-size: 0.7rem;
@@ -369,7 +393,10 @@
 .service-price {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 8px;
   font-family: 'Montserrat', 'Inter', sans-serif;
 }
@@ -397,7 +424,7 @@
   align-items: center;
   gap: 10px;
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   padding: 12px 24px;
   border-radius: 50px;
   font-size: 0.9rem;
@@ -406,7 +433,7 @@
 }
 
 .info-box svg {
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   font-size: 1.1rem;
 }
 
@@ -414,7 +441,7 @@
   text-align: center;
   padding: 20px;
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   border-radius: 18px;
   margin-bottom: 30px;
 }
@@ -432,7 +459,8 @@
 }
 
 .installment {
-  color: var(--accent-blue) !important;
+  color: var(--accent-gold) !important;
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 .quick-contact {
@@ -440,13 +468,16 @@
   padding: 30px;
   background: var(--bg-card);
   border-radius: 24px;
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
 }
 
 .quick-contact h3 {
   font-size: 1.3rem;
   margin-bottom: 20px;
-  color: var(--text-main);
+  background: linear-gradient(135deg, var(--text-main), var(--accent-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
@@ -471,9 +502,9 @@
 }
 
 .contact-btn.phone {
-  background: rgba(157, 157, 255, 0.15);
-  border: 1px solid var(--accent-blue);
-  color: var(--accent-blue);
+  background: rgba(232, 201, 122, 0.04);
+  border: 1px solid rgba(232, 201, 122, 0.08);
+  color: var(--accent-gold);
 }
 
 .contact-btn.whatsapp {
@@ -491,6 +522,10 @@
 .contact-btn:hover {
   transform: translateY(-3px);
   filter: brightness(1.1);
+}
+
+.contact-btn.phone:hover {
+  box-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .modal-overlay {
@@ -513,8 +548,8 @@
   max-width: 500px;
   width: 90%;
   position: relative;
-  border: 1px solid var(--border-glass);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(232, 201, 122, 0.06);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px var(--accent-gold-glow);
 }
 
 .modal-close-btn {
@@ -533,9 +568,9 @@
 }
 
 .modal-close-btn:hover {
-  background: rgba(157, 157, 255, 0.15);
+  background: rgba(232, 201, 122, 0.06);
   transform: rotate(90deg);
-  color: var(--accent-blue);
+  color: var(--accent-gold);
 }
 
 .modal-title {
@@ -545,6 +580,10 @@
   text-align: center;
   font-weight: 700;
   font-family: 'Montserrat', 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--text-main), var(--accent-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .modal-form {
@@ -557,7 +596,7 @@
   width: 100%;
   padding: 14px 18px;
   border-radius: 14px;
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-main);
   font-size: 15px;
@@ -567,8 +606,8 @@
 }
 
 .modal-form input:focus, .modal-form select:focus {
-  border-color: var(--accent-blue);
-  box-shadow: 0 0 0 5px rgba(157, 157, 255, 0.1);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 5px rgba(232, 201, 122, 0.05), 0 0 30px var(--accent-gold-glow);
 }
 
 .modal-form select option {
@@ -579,11 +618,12 @@
   text-align: center;
   margin: 10px 0;
   padding: 12px;
-  background: rgba(157, 157, 255, 0.1);
+  background: rgba(232, 201, 122, 0.04);
   border-radius: 14px;
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   font-weight: 600;
   font-family: 'Inter', sans-serif;
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 .modal-info-text {
@@ -595,8 +635,9 @@
 }
 
 .modal-submit-btn {
-  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-blue));
-  color: var(--accent-yellow);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose), var(--accent-indigo));
+  background-size: 200% auto;
+  color: var(--bg-dark);
   padding: 14px;
   font-size: 16px;
   font-weight: 700;
@@ -609,10 +650,10 @@
 }
 
 .modal-submit-btn:hover {
-  background: #ffffff;
-  color: var(--accent-deep);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px var(--accent-yellow-glow);
+  background-position: 100% center;
+  color: var(--bg-dark);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 35px var(--accent-gold-glow), 0 0 50px var(--accent-rose-glow);
 }
 
 .modal-success {
@@ -622,7 +663,7 @@
 
 .modal-success .success-icon {
   font-size: 70px;
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   margin-bottom: 15px;
 }
 

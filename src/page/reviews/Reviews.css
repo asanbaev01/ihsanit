@@ -6,11 +6,15 @@
   --border-glass: rgba(255, 255, 255, 0.12);
   --accent-blue: #9d9dff;
   --accent-indigo: #5E5DF2;
+  --accent-gold: #E8C97A;
+  --accent-rose: #FF6B9D;
+  --accent-cyan: #00D4FF;
   --accent-deep: #1E1B6B;
-  --accent-yellow: #ffffff;
-  --accent-yellow-glow: rgba(157, 157, 255, 0.4);
+  --accent-gold-glow: rgba(232, 201, 122, 0.2);
+  --accent-rose-glow: rgba(255, 107, 157, 0.1);
   --text-main: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.7);
+  --text-warm: #EDE4F5;
 }
 
 .reviews {
@@ -33,17 +37,17 @@
   text-align: center;
   margin-bottom: 16px;
   letter-spacing: -1px;
-  background: linear-gradient(135deg, var(--text-main), var(--accent-blue), var(--accent-indigo));
+  background: linear-gradient(135deg, var(--text-main), var(--accent-gold), var(--accent-blue), var(--accent-indigo));
+  background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
 }
 
 .reviews-subtitle {
   text-align: center;
   margin-bottom: 60px;
-  color: var(--text-muted);
+  color: var(--text-warm);
   font-size: 1.25rem;
   font-weight: 400;
   font-family: 'Inter', sans-serif;
@@ -51,6 +55,7 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+  text-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .reviews-stats {
@@ -77,13 +82,16 @@
   font-size: 2.5rem;
   font-weight: 800;
   font-family: 'Montserrat', 'Inter', sans-serif;
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 8px;
   transition: all 0.3s ease;
 }
 
 .review-stat:hover h3 {
-  text-shadow: 0 0 10px var(--accent-yellow-glow);
+  text-shadow: 0 0 30px var(--accent-gold-glow);
   transform: scale(1.02);
 }
 
@@ -105,26 +113,29 @@
   padding: 45px;
   border-radius: 28px;
   text-align: center;
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
   backdrop-filter: blur(5px);
 }
 
 .review-card:hover {
-  border-color: var(--accent-blue);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent-gold);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4), 0 0 40px var(--accent-gold-glow);
   transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(232, 201, 122, 0.02);
 }
 
 .review-img {
   font-size: 80px;
   margin-bottom: 20px;
-  filter: drop-shadow(0 5px 15px var(--accent-yellow-glow));
+  filter: drop-shadow(0 5px 15px var(--accent-gold-glow));
 }
 
 .review-stars {
-  color: var(--accent-blue);
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 22px;
   margin-bottom: 25px;
   letter-spacing: 3px;
@@ -141,7 +152,7 @@
 }
 
 .review-card:hover .review-text {
-  color: #ffffff;
+  color: var(--text-warm);
 }
 
 .review-card h4 {
@@ -154,15 +165,19 @@
 }
 
 .review-card:hover h4 {
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .review-role {
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   font-size: 0.9rem;
   margin-bottom: 8px;
   font-weight: 500;
   font-family: 'Inter', sans-serif;
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 .review-course {
@@ -182,7 +197,7 @@
 .review-prev, .review-next, .review-play {
   padding: 10px 22px;
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   border-radius: 40px;
   color: var(--text-main);
   box-shadow: none;
@@ -204,7 +219,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(157, 157, 255, 0.25), transparent);
+  background: linear-gradient(90deg, transparent, rgba(232, 201, 122, 0.15), transparent);
   transition: left 0.4s ease;
   z-index: -1;
 }
@@ -214,12 +229,12 @@
 }
 
 .review-prev:hover, .review-next:hover, .review-play:hover {
-  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-blue));
-  color: var(--accent-yellow);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  color: var(--bg-dark);
   transform: scale(1.05);
   border-color: transparent;
   font-weight: 700;
-  box-shadow: 0 8px 20px rgba(94, 93, 242, 0.3);
+  box-shadow: 0 8px 25px var(--accent-gold-glow);
 }
 
 .review-dots {
@@ -233,7 +248,7 @@
   width: 10px;
   height: 10px;
   padding: 0;
-  background: rgba(157, 157, 255, 0.3);
+  background: rgba(232, 201, 122, 0.15);
   border-radius: 50%;
   box-shadow: none;
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
@@ -241,14 +256,14 @@
 }
 
 .review-dot.active {
-  background: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
   transform: scale(1.5);
-  box-shadow: 0 0 10px var(--accent-yellow-glow);
+  box-shadow: 0 0 20px var(--accent-gold-glow);
 }
 
 .review-dot:hover {
   transform: scale(1.3);
-  background: rgba(157, 157, 255, 0.7);
+  background: rgba(232, 201, 122, 0.4);
 }
 
 .rating-summary {
@@ -260,12 +275,18 @@
   font-size: 48px;
   font-weight: 800;
   font-family: 'Montserrat', 'Inter', sans-serif;
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: block;
 }
 
 .rating-stars {
-  color: var(--accent-blue);
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 24px;
   margin: 10px 0;
 }

@@ -146,6 +146,7 @@
   display: flex;
   gap: 25px;
   justify-content: center;
+  align-items: center;
 }
 
 .btn-modern {
@@ -153,12 +154,15 @@
   font-size: 1.05rem;
   font-weight: 700;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  border-radius: 16px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   border: none;
   position: relative;
   overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary-neon {
@@ -173,17 +177,17 @@
 }
 
 .btn-secondary-neon {
-  background: rgba(30, 27, 107, 0.8);
+  background: transparent;
   color: #fff;
   border: 1px solid rgba(133, 133, 255, 0.5);
-  backdrop-filter: blur(12px);
+  padding: 16px 40px;
 }
 
 .btn-secondary-neon:hover {
-  background: rgba(133, 133, 255, 0.15);
+  background: rgba(133, 133, 255, 0.1);
   border-color: var(--accent-blue);
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(94, 93, 242, 0.4);
+  box-shadow: 0 10px 30px rgba(133, 133, 255, 0.2);
 }
 
 .btn-cyan {
@@ -287,6 +291,7 @@
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   backdrop-filter: blur(12px);
+  cursor: pointer;
 }
 
 .course-card:hover {

@@ -6,10 +6,70 @@ function Reviews() {
   const [autoPlay, setAutoPlay] = useState(true)
 
   const reviews = [
-    { name: 'Айжан Абдыраимова', role: 'Frontend Developer в TechCorp', text: 'OHSAN IT Academy помог мне освоить новую профессию и найти работу. Курс по React был очень полезным и современным. Теперь я работаю в крупной IT компании!', rating: 5, image: '👩‍💻', course: 'Frontend Development' },
-    { name: 'Эрлан Асанов', role: 'Backend Developer', text: 'Курсы Python и Django проведены на отличном уровне. Преподаватели профессионалы и к каждому студенту индивидуальный подход. Всем рекомендую!', rating: 5, image: '👨‍💻', course: 'Python Programming' },
-    { name: 'Мээрим Кадыралиева', role: 'UI/UX Designer', text: 'Дизайн курсы помогли мне создать портфолио и устроиться на первую работу. Мои знания Figma и Adobe XD расширились. Спасибо!', rating: 5, image: '🎨', course: 'UI/UX Design' },
-    { name: 'Бексултан Калыков', role: 'Mobile Developer', text: 'Через курс React Native я создал 2 мобильных приложения. Теперь работаю фрилансером и хорошо зарабатываю. Помощь академии была огромной!', rating: 5, image: '📱', course: 'Mobile Development' }
+    {
+      name: 'Айжан Абдыраимова',
+      role: 'Frontend Developer в TechCorp',
+      text: 'OHSAN IT Academy помогла мне освоить новую профессию и найти работу. Курс по React был очень полезным и современным. Теперь я работаю в крупной IT компании!',
+      rating: 5,
+      image: '👩‍💻',
+      course: 'Frontend Development'
+    },
+    {
+      name: 'Эрлан Асанов',
+      role: 'Backend Developer',
+      text: 'Курсы Python и Django проведены на отличном уровне. Преподаватели профессионалы и к каждому студенту индивидуальный подход. Всем рекомендую!',
+      rating: 5,
+      image: '👨‍💻',
+      course: 'Python Programming'
+    },
+    {
+      name: 'Мээрим Кадыралиева',
+      role: 'UI/UX Designer',
+      text: 'Дизайн курсы помогли мне создать портфолио и устроиться на первую работу. Мои знания Figma и Adobe XD расширились. Спасибо!',
+      rating: 5,
+      image: '🎨',
+      course: 'UI/UX Design'
+    },
+    {
+      name: 'Бексултан Калыков',
+      role: 'Mobile Developer',
+      text: 'Через курс React Native я создал 2 мобильных приложения. Теперь работаю фрилансером и хорошо зарабатываю. Помощь академии была огромной!',
+      rating: 5,
+      image: '📱',
+      course: 'Mobile Development'
+    },
+    {
+      name: 'Нурсултан Жумабеков',
+      role: 'DevOps Engineer',
+      text: 'Курс по DevOps открыл мне глаза на современную инфраструктуру. Docker, Kubernetes, CI/CD — теперь я уверенно управляю облачными системами. Лучший курс в Кыргызстане!',
+      rating: 5,
+      image: '☁️',
+      course: 'DevOps Engineering'
+    },
+    {
+      name: 'Гульнара Кожомкулова',
+      role: 'Data Scientist',
+      text: 'Data Science курс дал мне мощную базу. Pandas, NumPy, Scikit-learn, машинное обучение — теперь я работаю аналитиком в банке. Спасибо команде OHSAN!',
+      rating: 5,
+      image: '📊',
+      course: 'Data Science'
+    },
+    {
+      name: 'Алмаз Турдумаматов',
+      role: 'Cybersecurity Specialist',
+      text: 'Курс по кибербезопасности превзошел все ожидания. Научился защищать сети, находить уязвимости и работать с Kali Linux. Очень практичные занятия!',
+      rating: 5,
+      image: '🔒',
+      course: 'Cybersecurity'
+    },
+    {
+      name: 'Айгерим Маматкулова',
+      role: 'Product Manager',
+      text: 'Очень довольна курсом по продуктовому менеджменту. Научилась работать с дорожными картами, управлять командой и запускать продукты. Крутые кейсы!',
+      rating: 5,
+      image: '🚀',
+      course: 'Product Management'
+    }
   ]
 
   useEffect(() => {
@@ -53,9 +113,30 @@ function Reviews() {
         </div>
         
         <div className="review-controls">
-          <button className="review-prev" onClick={() => { setActiveReview((prev) => (prev - 1 + reviews.length) % reviews.length); setAutoPlay(false) }}>←</button>
-          <button className="review-play" onClick={() => setAutoPlay(!autoPlay)}>{autoPlay ? '⏸' : '▶'}</button>
-          <button className="review-next" onClick={() => { setActiveReview((prev) => (prev + 1) % reviews.length); setAutoPlay(false) }}>→</button>
+          <button 
+            className="review-prev" 
+            onClick={() => { 
+              setActiveReview((prev) => (prev - 1 + reviews.length) % reviews.length)
+              setAutoPlay(false) 
+            }}
+          >
+            ←
+          </button>
+          <button 
+            className="review-play" 
+            onClick={() => setAutoPlay(!autoPlay)}
+          >
+            {autoPlay ? '⏸' : '▶'}
+          </button>
+          <button 
+            className="review-next" 
+            onClick={() => { 
+              setActiveReview((prev) => (prev + 1) % reviews.length)
+              setAutoPlay(false) 
+            }}
+          >
+            →
+          </button>
         </div>
         
         <div className="review-dots">
@@ -63,7 +144,10 @@ function Reviews() {
             <button 
               key={idx} 
               className={`review-dot ${activeReview === idx ? 'active' : ''}`} 
-              onClick={() => { setActiveReview(idx); setAutoPlay(false) }} 
+              onClick={() => { 
+                setActiveReview(idx)
+                setAutoPlay(false) 
+              }} 
             />
           ))}
         </div>

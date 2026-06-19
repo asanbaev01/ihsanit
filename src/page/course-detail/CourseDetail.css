@@ -6,11 +6,15 @@
   --border-glass: rgba(255, 255, 255, 0.12);
   --accent-blue: #9d9dff;
   --accent-indigo: #5E5DF2;
+  --accent-gold: #E8C97A;
+  --accent-rose: #FF6B9D;
+  --accent-cyan: #00D4FF;
   --accent-deep: #1E1B6B;
-  --accent-yellow: #ffffff;
-  --accent-yellow-glow: rgba(157, 157, 255, 0.4);
+  --accent-gold-glow: rgba(232, 201, 122, 0.2);
+  --accent-rose-glow: rgba(255, 107, 157, 0.1);
   --text-main: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.7);
+  --text-warm: #EDE4F5;
 }
 
 .course-detail {
@@ -34,7 +38,7 @@
   background: rgba(255, 255, 255, 0.04);
   box-shadow: none;
   color: var(--text-main);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.08);
   width: auto;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
@@ -61,11 +65,12 @@
 }
 
 .back-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border-color: var(--accent-blue);
+  background: rgba(232, 201, 122, 0.06);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
   transform: translateX(5px);
   padding-left: 45px;
+  box-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .detail-header {
@@ -81,7 +86,8 @@
   text-align: left;
   margin-bottom: 0;
   font-size: 2.5rem;
-  background: linear-gradient(135deg, var(--text-main), var(--accent-blue));
+  background: linear-gradient(135deg, var(--text-main), var(--accent-gold), var(--accent-blue));
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -93,7 +99,7 @@
 .detail-header h1::after {
   left: 0;
   transform: translateX(0);
-  background: linear-gradient(90deg, var(--accent-blue), transparent);
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue), transparent);
   width: 0;
   height: 3px;
   transition: width 0.4s ease;
@@ -105,14 +111,15 @@
 }
 
 .detail-badge {
-  background: rgba(157, 157, 255, 0.2);
+  background: rgba(232, 201, 122, 0.08);
   padding: 8px 24px;
   border-radius: 40px;
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   font-weight: 700;
   font-size: 14px;
   font-family: 'Inter', sans-serif;
-  border: 1px solid rgba(157, 157, 255, 0.3);
+  border: 1px solid rgba(232, 201, 122, 0.1);
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 .detail-grid {
@@ -126,20 +133,23 @@
   padding: 32px;
   border-radius: 24px;
   margin-bottom: 30px;
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   transition: all 0.3s ease;
 }
 
 .detail-section:hover {
-  border-color: var(--accent-blue);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 30px var(--accent-gold-glow);
+  background: rgba(232, 201, 122, 0.02);
 }
 
 .detail-section h2 {
   font-size: 1.5rem;
   margin-bottom: 22px;
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: relative;
   display: inline-block;
   font-weight: 700;
@@ -153,7 +163,7 @@
   left: 0;
   width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-blue), transparent);
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue), transparent);
   transition: width 0.3s ease;
   border-radius: 2px;
 }
@@ -176,7 +186,7 @@
 
 .syllabus-list li {
   padding: 14px;
-  border-bottom: 1px solid rgba(157, 157, 255, 0.1);
+  border-bottom: 1px solid rgba(232, 201, 122, 0.04);
   display: flex;
   align-items: center;
   gap: 14px;
@@ -188,33 +198,34 @@
 
 .syllabus-list li:hover {
   transform: translateX(8px);
-  color: #ffffff;
-  background: rgba(157, 157, 255, 0.1);
+  color: var(--accent-gold);
+  background: rgba(232, 201, 122, 0.04);
   border-radius: 12px;
   padding-left: 20px;
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 .syllabus-num {
   width: 28px;
   height: 28px;
-  background: rgba(157, 157, 255, 0.2);
+  background: rgba(232, 201, 122, 0.06);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   font-size: 13px;
   font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
-  border: 1px solid rgba(157, 157, 255, 0.3);
+  border: 1px solid rgba(232, 201, 122, 0.06);
 }
 
 .syllabus-list li:hover .syllabus-num {
   transform: scale(1.1);
-  background: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
   color: var(--bg-dark);
-  box-shadow: 0 0 12px var(--accent-yellow-glow);
+  box-shadow: 0 0 20px var(--accent-gold-glow);
 }
 
 .detail-tech {
@@ -233,14 +244,15 @@
   font-family: 'Inter', sans-serif;
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
   cursor: default;
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
 }
 
 .detail-tech span:hover {
   transform: translateY(-3px) scale(1.05);
-  background: rgba(157, 157, 255, 0.2);
-  color: #ffffff;
-  border-color: var(--accent-blue);
+  background: rgba(232, 201, 122, 0.06);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 20px var(--accent-gold-glow);
 }
 
 .detail-sidebar {
@@ -254,15 +266,15 @@
   border-radius: 24px;
   text-align: center;
   margin-bottom: 25px;
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   transition: all 0.3s ease;
 }
 
 .price-card:hover {
   transform: translateY(-5px);
-  border-color: var(--accent-blue);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-gold);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px var(--accent-gold-glow);
+  background: rgba(232, 201, 122, 0.02);
 }
 
 .price-card h3 {
@@ -272,11 +284,16 @@
   font-weight: 600;
   font-family: 'Montserrat', 'Inter', sans-serif;
 }
-
+.price-card p{
+   color: white;
+}
 .price-amount {
   font-size: 3rem;
   font-weight: 800;
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 15px 0;
   letter-spacing: -1px;
   font-family: 'Montserrat', 'Inter', sans-serif;
@@ -294,10 +311,11 @@
   font-family: 'Inter', 'Montserrat', sans-serif;
   border-radius: 50px;
   cursor: pointer;
-  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-blue));
-  color: var(--accent-yellow);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose), var(--accent-indigo));
+  background-size: 200% auto;
+  color: #1E1B6B;
   border: none;
-  box-shadow: 0 8px 20px rgba(94, 93, 242, 0.3);
+  box-shadow: 0 8px 20px var(--accent-gold-glow);
 }
 
 .enroll-btn::before {
@@ -307,7 +325,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.5s ease;
 }
 
@@ -316,10 +334,10 @@
 }
 
 .enroll-btn:hover {
-  background: #ffffff;
-  color: var(--accent-deep);
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px var(--accent-yellow-glow);
+  background-position: 100% center;
+  color: #1E1B6B;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px var(--accent-gold-glow), 0 0 50px var(--accent-rose-glow);
 }
 
 .info-card {
@@ -327,31 +345,33 @@
   padding: 25px;
   border-radius: 24px;
   margin-bottom: 25px;
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   transition: all 0.3s ease;
 }
 
 .info-card:hover {
-  border-color: var(--accent-blue);
+  border-color: var(--accent-gold);
   transform: translateX(5px);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(232, 201, 122, 0.02);
+  box-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .info-card h3 {
   font-size: 1.1rem;
   margin-bottom: 18px;
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   position: relative;
   display: inline-block;
   font-weight: 700;
   font-family: 'Montserrat', 'Inter', sans-serif;
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 .info-row {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(157, 157, 255, 0.1);
+  border-bottom: 1px solid rgba(232, 201, 122, 0.04);
   color: var(--text-main);
   font-size: 0.9rem;
   font-family: 'Inter', sans-serif;
@@ -359,9 +379,14 @@
 }
 
 .info-row:hover {
-  color: #ffffff;
+  color: var(--accent-gold);
   transform: translateX(5px);
   padding-left: 5px;
+  text-shadow: 0 0 15px var(--accent-gold-glow);
+}
+
+.info-row strong {
+  color: var(--text-muted);
 }
 
 .contact-card {
@@ -369,19 +394,23 @@
   padding: 25px;
   border-radius: 24px;
   text-align: center;
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.04);
   transition: all 0.3s ease;
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
-  border-color: var(--accent-blue);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-gold);
+  background: rgba(232, 201, 122, 0.02);
+  box-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .contact-card h3 {
   margin-bottom: 12px;
-  color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 1.1rem;
   font-weight: 700;
   font-family: 'Montserrat', 'Inter', sans-serif;
@@ -400,8 +429,8 @@
   width: auto;
   transition: all 0.3s ease;
   background: transparent;
-  border: 1px solid var(--border-glass);
-  color: var(--accent-blue);
+  border: 1px solid rgba(232, 201, 122, 0.08);
+  color: var(--accent-gold);
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
@@ -409,10 +438,11 @@
 }
 
 .contact-card button:hover {
-  background: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
   color: var(--bg-dark);
   transform: scale(1.05);
   border-color: transparent;
+  box-shadow: 0 0 30px var(--accent-gold-glow);
 }
 
 .modal {
@@ -435,8 +465,8 @@
   max-width: 500px;
   width: 90%;
   position: relative;
-  border: 1px solid var(--border-glass);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(232, 201, 122, 0.06);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px var(--accent-gold-glow);
 }
 
 .modal-close {
@@ -460,9 +490,9 @@
 }
 
 .modal-close:hover {
-  background: rgba(157, 157, 255, 0.15);
+  background: rgba(232, 201, 122, 0.06);
   transform: rotate(90deg) scale(1.1);
-  color: var(--accent-blue);
+  color: var(--accent-gold);
 }
 
 .modal-content h2 {
@@ -472,6 +502,10 @@
   text-align: center;
   font-weight: 700;
   font-family: 'Montserrat', 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--text-main), var(--accent-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .modal-content input {
@@ -479,7 +513,7 @@
   padding: 14px 18px;
   margin-bottom: 16px;
   border-radius: 14px;
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(232, 201, 122, 0.06);
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
   outline: none;
@@ -489,8 +523,8 @@
 }
 
 .modal-content input:focus {
-  border-color: var(--accent-blue);
-  box-shadow: 0 0 0 5px rgba(157, 157, 255, 0.1);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 5px rgba(232, 201, 122, 0.05), 0 0 30px var(--accent-gold-glow);
   transform: scale(1.01);
 }
 
@@ -509,31 +543,34 @@
   font-family: 'Inter', 'Montserrat', sans-serif;
   border-radius: 50px;
   cursor: pointer;
-  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-blue));
-  color: var(--accent-yellow);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose), var(--accent-indigo));
+  background-size: 200% auto;
+  color: #1E1B6B;
   border: none;
 }
 
 .modal-content button[type="submit"]:hover {
-  background: #ffffff;
-  color: var(--accent-deep);
-  transform: translateY(-3px);
+  background-position: 100% center;
+  color: #1E1B6B;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px var(--accent-gold-glow);
 }
 
 .toast {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: rgba(30, 27, 107, 0.9);
-  border: 1px solid var(--accent-blue);
-  color: #ffffff;
+  background: rgba(30, 27, 107, 0.95);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
   padding: 14px 28px;
   border-radius: 50px;
   z-index: 2000;
   font-weight: 700;
   font-size: 0.95rem;
   font-family: 'Inter', sans-serif;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 30px var(--accent-gold-glow);
+  text-shadow: 0 0 15px var(--accent-gold-glow);
 }
 
 @media (max-width: 992px) {

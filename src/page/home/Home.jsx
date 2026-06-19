@@ -135,7 +135,7 @@ function Home({ setActiveSection }) {
           <button className="btn-modern btn-primary-neon" onClick={() => setActiveSection('courses')}>
             <FaRocket style={{ marginRight: '8px' }} /> Начать обучение
           </button>
-          <button className="btn-modern btn-secondary-neon" onClick={() => setActiveSection('contacts')}>
+          <button className="btn-modern btn-secondary-neon" onClick={() => setActiveSection('contact')}>
             <FaRegCommentDots style={{ marginRight: '8px' }} /> Консультация
           </button>
         </div>
@@ -164,7 +164,7 @@ function Home({ setActiveSection }) {
         
         <div className="courses-grid">
           {courses.map((course) => (
-            <div className="course-card" key={course.id}>
+            <div className="course-card" key={course.id} onClick={() => setActiveSection('courses')}>
               <div className="course-icon">{course.icon}</div>
               <span className="course-students">
                 <FaRegSmile style={{ marginRight: '4px' }} /> {course.count} студентов
@@ -234,7 +234,7 @@ function Home({ setActiveSection }) {
             <p>Оставьте заявку, и наш ментор перезвонит вам в течение 10 минут!</p>
           </div>
         </div>
-        <button className="btn-modern btn-cyan" onClick={() => alert('Заявка принята!')}>
+        <button className="btn-modern btn-cyan" onClick={() => setActiveSection('contact')}>
           <FaPhoneAlt style={{ marginRight: '8px' }} /> Перезвоните мне
         </button>
       </div>

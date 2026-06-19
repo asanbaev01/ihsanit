@@ -21,15 +21,15 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  border-bottom: 1px solid rgba(94, 93, 242, 0.1);
+  border-bottom: 1px solid rgba(232, 201, 122, 0.08);
   transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 .header.scrolled {
   background: rgba(30, 27, 107, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(133, 133, 255, 0.4);
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(232, 201, 122, 0.2);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(232, 201, 122, 0.04);
 }
 
 .logo-container {
@@ -48,7 +48,7 @@
   transform: translate(-50%, -50%);
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(94, 93, 242, 0.5) 0%, rgba(53, 44, 172, 0.2) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(232, 201, 122, 0.3) 0%, rgba(94, 93, 242, 0.15) 40%, transparent 70%);
   border-radius: 50%;
   filter: blur(20px);
   transition: all 0.4s ease;
@@ -62,7 +62,7 @@
 .logo-container:hover .logo-glow {
   width: 240px;
   height: 240px;
-  background: radial-gradient(circle, rgba(133, 133, 255, 0.7) 0%, rgba(94, 93, 242, 0.3) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(232, 201, 122, 0.5) 0%, rgba(133, 133, 255, 0.2) 40%, transparent 70%);
   filter: blur(25px);
 }
 
@@ -71,7 +71,7 @@
   width: auto;
   position: relative;
   z-index: 2;
-  filter: drop-shadow(0 0 12px rgba(94, 93, 242, 0.6));
+  filter: drop-shadow(0 0 12px rgba(232, 201, 122, 0.3));
   transition: all 0.3s ease;
 }
 
@@ -79,25 +79,25 @@
   font-family: 'Montserrat', 'Inter', sans-serif;
   font-size: 28px;
   font-weight: 800;
-  background: linear-gradient(135deg, #FFFFFF, #9d9dff, #5E5DF2);
-  background-size: 200% auto;
+  background: linear-gradient(135deg, #FFFFFF, #E8C97A, #9d9dff, #5E5DF2);
+  background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   letter-spacing: 2px;
   position: relative;
   z-index: 2;
-  text-shadow: 0 0 20px rgba(94, 93, 242, 0.3);
+  text-shadow: 0 0 20px rgba(232, 201, 122, 0.15);
   transition: all 0.3s ease;
 }
 
 .logo-container:hover .logo-img {
-  filter: drop-shadow(0 0 20px rgba(133, 133, 255, 0.9));
+  filter: drop-shadow(0 0 20px rgba(232, 201, 122, 0.6));
 }
 
 .logo-container:hover .logo-text {
   background-position: 100% center;
-  text-shadow: 0 0 30px rgba(133, 133, 255, 0.5);
+  text-shadow: 0 0 30px rgba(232, 201, 122, 0.25);
 }
 
 .header nav {
@@ -108,13 +108,14 @@
   backdrop-filter: blur(10px);
   padding: 8px 24px;
   border-radius: 60px;
-  border: 1px solid rgba(133, 133, 255, 0.3);
+  border: 1px solid rgba(232, 201, 122, 0.12);
   transition: all 0.3s ease;
 }
 
 .header nav:hover {
-  border-color: rgba(133, 133, 255, 0.6);
+  border-color: rgba(232, 201, 122, 0.3);
   background: rgba(30, 27, 107, 0.6);
+  box-shadow: 0 0 30px rgba(232, 201, 122, 0.04);
 }
 
 .header nav a {
@@ -138,7 +139,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #5E5DF2, #352CAC);
+  background: linear-gradient(135deg, #E8C97A, #FF6B9D, #5E5DF2);
   border-radius: 40px;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -153,6 +154,7 @@
 .header nav a:hover {
   color: #ffffff;
   transform: translateY(-2px);
+  text-shadow: 0 0 20px rgba(232, 201, 122, 0.15);
 }
 
 .header nav a:active {
@@ -171,13 +173,13 @@
 .mobile-menu-btn span {
   width: 28px;
   height: 3px;
-  background: linear-gradient(90deg, #9d9dff, #FFFFFF);
+  background: linear-gradient(90deg, #E8C97A, #FFFFFF);
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
   border-radius: 3px;
 }
 
 .mobile-menu-btn:hover span {
-  filter: drop-shadow(0 0 5px rgba(133, 133, 255, 0.8));
+  filter: drop-shadow(0 0 5px rgba(232, 201, 122, 0.6));
 }
 
 .mobile-menu-btn:hover span:nth-child(1) {
@@ -272,17 +274,17 @@
     top: 70px;
     left: 0;
     width: 100%;
-    background: #1E1B6B;
+    background: rgba(30, 27, 107, 0.98);
     backdrop-filter: blur(10px);
     padding: 20px;
     flex-direction: column;
     gap: 12px;
     border-radius: 0;
-    border-bottom: 2px solid #5E5DF2;
+    border-bottom: 2px solid #E8C97A;
     border-top: none;
     border-left: none;
     border-right: none;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(232, 201, 122, 0.04);
   }
   
   .header nav.mobile-open {
